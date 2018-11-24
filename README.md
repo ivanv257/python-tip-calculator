@@ -1,2 +1,2 @@
 # python-tip-calculator
-command line tip calculator
+Command Line Tip Calculator
