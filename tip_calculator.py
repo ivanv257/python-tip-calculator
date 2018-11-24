@@ -13,7 +13,7 @@ reservation()
 def calculate_tip():
     # Request bill amount 
     bill = input('Please enter your bill amount: ')
-    print(f'\nYour bill is: R{bill}\
+    print(f'\nYour bill is: R{bill}')
 
     # Request tip percentage
     tip_percentage = input('Tip percentage: ')
@@ -26,7 +26,8 @@ def calculate_tip():
     print(f'The tip amount is R{tip}')
 
     # bill including tip
-    total = bill + tip
+    total = int(bill) + int(tip)
     print(f"Your total is {total}")
 
 calculate_tip()
+
