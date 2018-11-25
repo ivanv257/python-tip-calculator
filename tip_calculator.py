@@ -2,13 +2,24 @@
 # Date: 24 November 2018
 # Purpose: Tip Calculator - takes input of user and returns tip amount
 
-def reservation():
-    customers = input('Reservation for how many people: ')
-    while int(customers) < 0:
-        reservation()
-    print(f'\nYour reservation is for {customers} people.\n') 
+reserved = 0
 
-reservation()
+# Request valid input for amount of customers
+def reservation():
+    while True:
+        try:
+            global reserved
+            reserved = int(input('How many people is the table for: '))
+            break
+        except:
+            print('Invalid input please enter a number')
+reservation()   
+
+if reserved == 0:
+    print('You did not make a reservation, please make a reservation')
+    reservation()
+else:
+    print(f'\nYour reservation is for {reserved} people.\n')
 
 def calculate_tip():
     # Request bill amount 
